@@ -1,0 +1,51 @@
+#codechef
+#winnerdhruv__1
+# cook your dish here
+empty_list=[0,0]
+def fast_fibo(n):
+    
+    if n==0:
+        empty_list[0]=0
+        empty_list[1]=1
+        return
+    
+    fast_fibo(n//2)
+    x=empty_list[0]
+    y=empty_list[1]
+    j=2*y-x
+    if j<0:
+        j=j+10
+    j=(x*j)%10
+    k=(x*x+y*y)%10
+    if n%2==0:
+        empty_list[0]=j%10
+        empty_list[1]=k%10
+    else:
+        empty_list[0]=k%10
+        empty_list[1]=(j+k)%10
+try:
+    test=int(input())
+    
+    for i in range(test):
+        n=int(input())
+        h=0
+        while n!=1:
+            if n%2==0:
+                n=n//2
+                h=h+1
+            else:
+                n=(n-1)//2
+                h=h+1
+        g=1
+        while h>0:
+            g=g*2
+            h=h-1
+        empty_list=[0,0]
+        fast_fibo(g-1)
+        print(empty_list[0])
+except:
+    pass
+            
+
+
+

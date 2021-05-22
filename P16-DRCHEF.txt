@@ -1,0 +1,68 @@
+#codechef
+#winnerdhruv__1
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+
+void docchef(){
+    ll number, xcure, d = 0;
+    cin >> number >> xcure;
+    vector<ll> a(number);
+    for(int i=0; i<number; i++){
+        cin >> a[i];
+    }
+
+    sort(a.begin(), a.end());
+    vector<ll>::iterator lower = lower_bound(a.begin(), a.end(), xcure);
+    ll lowerbound = lower - a.begin();
+
+    for(int i=lowerbound; i<number; i++)
+    {
+        if(xcure<a[i])
+        {
+            while(xcure<a[i])
+            {
+                xcure = 2*xcure;
+                d++;
+            }
+            d++;
+        }
+        else
+        d++;
+        xcure = 2*a[i];
+    }
+        ll total_days = lowerbound + d;
+        if(lowerbound != 0)
+        {
+            d = 0;
+            lowerbound--;
+            for(int i=lowerbound; i<number; i++)
+            {
+                if(xcure < a[i])
+                {
+                    while(xcure<a[i])
+                    {
+                        xcure = 2*xcure;
+                        d++;
+                    }
+                    d++;
+                }
+                else
+                d++;
+                xcure = 2*a[i];
+            }
+            if(d+lowerbound<total_days)
+                cout << d+lowerbound << endl;
+            else
+                cout << total_days << endl;
+        }
+        else
+            cout << total_days << endl;
+}
+
+int main(){
+    int t; cin >> t;
+    while(t--)
+        docchef();
+    return 0;
+}
