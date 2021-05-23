@@ -1,0 +1,12 @@
+#winnerdhruv__1
+# cook your dish here
+# cook your dish here
+n=int(input())
+a=list(map(int,input().split()))
+q=int(input())
+l=list(map(int,input().split()))
+d=sum(a)
+x=[]
+for i in range(q):
+    d=d*2
+    print(d%(1000000000+7))

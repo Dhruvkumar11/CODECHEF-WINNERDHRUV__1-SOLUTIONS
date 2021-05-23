@@ -1,0 +1,12 @@
+#codechef
+#winnerdhruv__1
+t=int(input())
+for i in range(t):
+    n=int(input())
+    l=list(map(int,input().split()))
+    l.sort()
+    x=l[0]
+    y=l[1]
+    z=l[-1]
+    d=abs(x-y)+abs(y-z)+abs(z-x)
+    print(d)

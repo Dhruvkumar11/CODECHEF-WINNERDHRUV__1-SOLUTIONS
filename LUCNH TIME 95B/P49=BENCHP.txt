@@ -1,0 +1,24 @@
+#winnerdhruv__1
+# cook your dish here
+from collections import Counter
+t=int(input())
+for i in range(t):
+    n,w,r=map(int,input().split())
+    p=list(map(int,input().split()))
+    if r>=w:
+        print("YES")
+    else:
+        d=w-r
+        x=dict(Counter(p))
+        summ=0
+        for i in x.keys():
+            if x[i]%2==0:
+                summ=summ+x[i]*i
+            else:
+                summ=summ+((x[i]-1)*i)
+        if (summ+r)>=w:
+            print("YES")
+        else:
+            print("NO")
+                    
+        

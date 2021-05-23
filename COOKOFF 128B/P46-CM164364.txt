@@ -1,0 +1,10 @@
+#codechef
+#winnerdhruv__1
+# cook your dish here
+from collections import Counter
+t=int(input())
+for i in range(t):
+    n,x=map(int,input().split())
+    a=list(map(int,input().split()))
+    c=set(a)
+    print(min(len(c),n-x))

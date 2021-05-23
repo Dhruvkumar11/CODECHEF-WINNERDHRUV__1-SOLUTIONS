@@ -1,0 +1,30 @@
+#winnerdhruv__1
+# cook your dish here
+# cook your dish here
+import math
+t=int(input())
+for i in range(t):
+    l=int(input())
+    s=list(input())
+    one=s.count('1')
+    zero=s.count('0')
+    d=math.ceil(l/2)
+    if one>=d or s[0]=='1':
+        print("YES")
+    else:
+        c=0
+        d=0
+        f=0
+        for i in range(len(s)):
+            if s[i]=='1':
+                d=d+1
+                if d>=c:
+                    f=1
+                    break
+            elif s[i]=='0':
+                c=c+1
+        if f==1:
+            print("YES")
+        else:
+            print("NO")
+                

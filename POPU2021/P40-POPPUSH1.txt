@@ -1,0 +1,17 @@
+#codechef
+#winnerdhruv__1
+#user winnerdhruv__1
+# cook your dish here
+n=int(input())
+l=list(map(int,input().split()))
+p=list(set(l))
+s=[]
+for i in range(len(p)):
+    s.append(l.count(p[i]))
+s.sort(reverse=True)
+answer=0
+for i in range(len(s)):
+    while s[i]>0:
+        s[i]-=2
+        answer+=1
+print(answer)
