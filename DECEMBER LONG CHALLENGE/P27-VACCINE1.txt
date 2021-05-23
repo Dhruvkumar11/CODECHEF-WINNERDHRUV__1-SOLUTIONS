@@ -1,0 +1,24 @@
+#codechef
+#winnerdhruv__1
+import math
+d1,v1,d2,v2,p=map(int,input().split())
+e=0
+c=0
+if d1==d2 and d2==1:
+    e=math.ceil(p/(v1+v2))
+    print(e)
+else:
+    c=min(d1,d2)-1
+    while e<p:
+        if d1>d2:
+            e=e+v2
+            d2=d2+1
+        elif d2>d1:
+            e=e+v1
+            d1=d1+1
+        elif d1==d2:
+            e=e+(v1+v2)
+        c=c+1
+    print(c)
+
+    

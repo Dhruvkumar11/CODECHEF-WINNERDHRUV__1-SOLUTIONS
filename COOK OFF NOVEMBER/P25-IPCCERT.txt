@@ -1,0 +1,24 @@
+#codechef
+#winnerdhruv__1
+# cook your dish here
+# cook your dish here
+n,m,k=map(int,input().split())
+a=[]
+i=0
+while i<n:
+    b=list(map(int,input().split()))
+    a.append(b)
+    i=i+1
+x=[]
+for i in range(len(a)):
+    s=a[i]
+    res=sum(s)
+    l=s[-1]
+    res=res-l
+    j=0
+    if res>=m and l<=10:
+        j=j+1
+    x.append(j)
+print(sum(x))
+        
+        

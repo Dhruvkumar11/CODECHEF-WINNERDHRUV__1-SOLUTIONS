@@ -1,0 +1,25 @@
+#codechef
+#winnerdhruv__1
+t=int(input())
+for i in range(t):
+    a=input()
+    b=input()
+    c=False
+    d=False
+    x=0
+    y=0
+    for i in range(len(a)):
+        if i%2==0 and a[i]==b[i]:
+            c=False
+        if i%2==0 and a[i]!=b[i]:
+            if c==False:
+               x=x+1
+               c=True
+        if i%2==1 and a[i]==b[i]:
+            d=False
+        if i%2==1 and a[i]!=b[i]:
+            if d==False:
+                y=y+1
+                d=True
+    result=x+y
+    print(result)

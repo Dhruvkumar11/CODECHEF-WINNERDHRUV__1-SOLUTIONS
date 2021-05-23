@@ -1,0 +1,15 @@
+#codecehf
+#winnerdhruv__1
+# cook your dish here
+#user winnerdhruv__1
+t=int(input())
+for i in range(t):
+	x,y,k,n = map(int,input().split())
+	diff =abs(x-y)
+	suum=diff/(-2*k)
+	if x==y:
+		print("Yes")
+	elif int(suum) == suum:
+		print("Yes")
+	else:
+		print("No")

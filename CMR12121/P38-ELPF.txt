@@ -1,0 +1,15 @@
+#codechef
+#winnerdhruv__1
+# cook your dish here
+t=int(input())
+for i in range(t):
+    n,m=map(int,input().split())
+    l=[]
+    for i in range(n):
+        l.append(10)
+    for i in range(m):
+        x,y,z=map(int,input().split())
+        for j in range(x-1,y):
+            l[j]=l[j]*z
+    print(sum(l)//n)
+        

@@ -1,0 +1,21 @@
+#codechef
+#winnerdhruv__1
+# cook your dish here
+#user winnerdhruv__1
+t=int(input())
+for i in range(t):
+    string=input()
+    n=len(string)
+    x=string.count('0')
+    y=string.count('1')
+    if n%2!=0:
+        result=-1
+    elif x==n or y==n:
+        result=-1
+    else:
+        point=n//2
+        if x>y:
+            result=point-y
+        else:
+            result=point-x
+    print(result)

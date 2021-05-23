@@ -1,0 +1,17 @@
+#codechef
+#winnerdhruv__1
+# cook your dish here
+#use winnerdhruv__1
+t=int(input())
+while t>0:
+    number=int(input())
+    string=input()
+    count=string.count('1')
+    result=120-number
+    ans=result+count
+    suum=(ans/120)*100
+    if suum>=75:
+        print("YES")
+    else:
+        print("NO")
+    t=t-1

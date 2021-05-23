@@ -1,0 +1,19 @@
+#codechef
+#winnerdhruv__1
+# cook your dish here
+import math
+t=int(input())
+for i in range(t):
+    n,d=map(int,input().split())
+    l=list(map(int,input().split()))
+    c,e=0,0
+    for i in range(n):
+        if l[i]>=80 or l[i]<=9:
+            c+=1
+        else:
+            e=e+1
+    r=math.ceil((c/d))+math.ceil((e/d))
+    print(r)
+            
+            
+        

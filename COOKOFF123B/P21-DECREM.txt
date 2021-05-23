@@ -1,0 +1,11 @@
+#codechef
+#winnerdhruv__1
+# cook your dish here
+n=int(input())
+for i in range(n):
+    l,r=map(int,input().split())
+    z=2*l-1
+    if r<=z:
+        print(r)
+    else:
+        print(-1)

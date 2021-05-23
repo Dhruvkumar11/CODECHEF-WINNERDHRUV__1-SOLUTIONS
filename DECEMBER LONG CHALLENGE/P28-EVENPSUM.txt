@@ -1,0 +1,12 @@
+#codechef
+#winnerdhruv__1
+# cook your dish here
+t=int(input())
+for i in range(t):
+    a,b=map(int,input().split())
+    evenofx=a//2
+    oddofx=a-evenofx
+    evenofy=b//2
+    oddofy=b-evenofy
+    result=(evenofx*evenofy)+(oddofx*oddofy)
+    print(result)
