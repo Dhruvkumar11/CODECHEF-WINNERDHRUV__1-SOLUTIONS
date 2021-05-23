@@ -1,0 +1,12 @@
+#codecehf
+#winnerdhruv__1
+# cook your dish here
+t=int(input())
+for i in range(t):
+    n=int(input())
+    a=list(map(int,input().split()))
+    asum=sum(a)
+    if asum%2==0:
+        print(1)
+    else:
+        print(2)
