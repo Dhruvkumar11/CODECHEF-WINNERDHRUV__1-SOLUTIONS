@@ -1,0 +1,28 @@
+#codechef
+#winnerdhruv__1
+# cook your dish here
+#user winnerdhruv__1 op
+for i in range(int(input())):
+    n,m=map(int,input().split())
+    l1=list(map(int,input().split()))
+    l2=list(map(int,input().split()))
+    suml1,suml2=sum(l1),sum(l2)
+    l1.sort(),l2.sort(reverse=True)
+    count=0
+    if suml1>suml2:
+        count=1
+        print(0)
+    else:
+        i=0
+        while i<n:
+            suml1=suml1-l1[i]
+            suml1+=l2[i]
+            suml2-=l2[i]
+            suml2=suml2+l1[i]
+            if suml1>suml2:
+                count=1
+                print(i+1)
+                break
+            i=i+1
+        if count==0:
+            print(-1)

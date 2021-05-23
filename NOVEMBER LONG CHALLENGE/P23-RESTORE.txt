@@ -1,0 +1,34 @@
+#codechef
+#winnerdhruv__1
+# cook your dish here
+a=[]
+def SieveOfEratosthenes(n): 
+	prime = [True for i in range(n+1)] 
+	p = 2
+	
+	while (p * p <= n):  
+		if (prime[p] == True): 
+			for i in range(p * p, n+1, p): 
+				prime[i] = False
+		p += 1 
+	for p in range(2, n+1): 
+		if prime[p]: 
+		    a.append(p)
+SieveOfEratosthenes(1299720)
+
+t=int(input())
+for i in range(t):
+    n=int(input())
+    b=list(map(int,input().split()))
+    c=a[:n]
+    e=0
+    for i in range(n):
+        d=i+1
+        if b[i]!=d:
+            c[i]=c[b[i]-1]
+        else:
+            continue
+    for i in range(len(c)):
+        print(c[i],end=' ')
+    print("\n")
+    
