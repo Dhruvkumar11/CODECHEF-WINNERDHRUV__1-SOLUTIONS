@@ -1,0 +1,14 @@
+#codechef
+#winnerdhruv__1
+# cook your dish here
+for i in range(int(input())):
+    n=int(input())
+    s=input()
+    x=s[:-1]
+    y=s[-1]
+    
+    if y in x:
+        print("YES")
+    else:
+        print("NO")
+            

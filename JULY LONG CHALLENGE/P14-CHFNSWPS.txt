@@ -1,0 +1,25 @@
+#codechef
+#winnerdhruv__1
+from collections import Counter
+testcase=int(input())
+for i in range(testcase):
+    n=int(input())
+    ctuple=tuple(map(int,input().split()))[:n]
+    dtuple=tuple(map(int,input().split()))[:n]
+    etuple=tuple(ctuple+dtuple)
+    a=0
+    for i in etuple:
+        a=a^i
+    if a!=0:
+        print(-1)
+    else:
+        minimum_value=min(etuple)
+        val=0
+        l1=list((Counter(ctuple)-Counter(dtuple)).elements())
+        l2=list((Counter(dtuple)-Counter(ctuple)).elements())
+        l1.sort()
+        l2.sort(reverse=True)
+        m=len(l1)
+        for i in range(m):
+            val+=min(min(l1[i],l2[i]),2*minimum_value)
+        print(val//2)

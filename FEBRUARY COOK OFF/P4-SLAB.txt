@@ -1,0 +1,41 @@
+#Codechef
+#winnerdhurv__1
+t=int(input())
+for i in range(t):
+    n=int(input())
+    t=n
+    temp=0
+    if n<=250000:
+        print(int(n))
+    elif n>=250001 and n<=500000:
+        b=n
+        p=n-250000
+        temp=temp+p*5/100
+        print(int(b-temp))
+    elif n>=500001 and n<=750000:
+        b=n
+        n1=b-500000
+        temp=temp+n1*10/100+12500
+        print(int(b-temp))
+    elif n>=750001 and n<=1000000:
+        b=n
+        n2=b-750000
+        temp=temp+12500+25000+n2*15/100
+        print(int(b-temp))
+    elif n>=1000001 and n<=1250000:
+        b=n
+        n3=b-1000000
+        temp=temp+12500+25000+37500+n3*20/100
+        print(int(b-temp))
+    elif n>=1250001 and n<=1500000:
+        b=n
+        n4=b-1250000
+        temp=temp+12500+25000+37500+50000+n4*25/100
+        print(int(b-temp))
+    elif n>1500000:
+        b=n
+        n5=b-1500000
+        temp=temp+12500+25000+37500+50000+62500+n5*30/100
+        print(int(b-temp))
+        
+        

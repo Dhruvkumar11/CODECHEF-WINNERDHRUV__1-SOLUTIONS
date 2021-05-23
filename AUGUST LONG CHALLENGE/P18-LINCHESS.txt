@@ -1,0 +1,17 @@
+#Codechef
+#winnerdhruv__1
+for i in range(int(input())):
+    npeople,k=map(int,input().split())
+    lst=list(map(int,input().split()))
+    a=-1
+    b=100000000000
+    i=0
+    while i<len(lst):
+        if k%lst[i]==0:
+            rem=k//lst[i]-1
+            if rem<b:
+                b=rem
+                a=lst[i]
+        i=i+1
+    print(a)  
+    

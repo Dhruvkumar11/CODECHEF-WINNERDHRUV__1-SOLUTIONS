@@ -1,0 +1,23 @@
+#codechef
+#winnerdhruv__1
+# cook your dish here
+from copy import deepcopy
+test_case=int(input())
+while test_case>0:
+    string_list=list(input())
+    pattern=list(input())
+    for i in pattern:
+        string_list.remove(i)
+    s=[]
+    k=[]
+    temp=s
+    string_list.sort()
+    newstring=deepcopy(string_list)
+    newstring.append(pattern[0])
+    newstring=sorted(newstring,reverse=True)
+    if pattern[0] not in string_list:
+        print(''.join(string_list[0:len(newstring)-newstring.index(pattern[0])-1]) +''.join(pattern) +''.join(string_list[len(newstring)-newstring.index(pattern[0])-1:]))
+    else:
+        m=''.join(string_list[0:string_list.index(pattern[0])])+''.join(pattern)+''.join(string_list[string_list.index(pattern[0]):])
+        print(min(m,''.join(string_list[0:len(newstring)-newstring.index(pattern[0])-1])+''.join(pattern)+''.join(string_list[len(newstring)-newstring.index(pattern[0])-1:])))
+    test_case-=1 

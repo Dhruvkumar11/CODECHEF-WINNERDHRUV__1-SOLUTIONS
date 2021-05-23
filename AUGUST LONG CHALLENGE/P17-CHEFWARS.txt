@@ -1,0 +1,17 @@
+#codechef
+#winnerdhruv__1
+# cook your dish here
+for i in range(int(input())):
+    health,power=map(int,input().split())
+    for i in range((power//2)+1):
+        if health>power:
+            health=health-power
+            power=power//2
+            if power==0:
+                print(0)
+                break
+            else:
+                continue 
+        elif power>=health:
+            print(1)
+            break
